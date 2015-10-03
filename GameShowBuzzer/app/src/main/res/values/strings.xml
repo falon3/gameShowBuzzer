@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GameShowBuzzer</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="mainMenuTextView">Main Menu</string>
+    <string name="reactionTimerButton">Reaction Timer</string>
+    <string name="gameShowBuzzerButton">Game Show Buzzer</string>
+</resources>
