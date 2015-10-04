@@ -11,7 +11,6 @@
     <string name="player2Button">Player3</string>
     <string name="Player3Button">Player3</string>
     <string name="Player4Button">Player4</string>
-    <string name="StopButton">STOP</string>
     <string name="numPlayersText">Select Number of Players</string>
     <string name="TwoPlayerModeButton">2 Players</string>
     <string name="ThreePlayerModeButton">3 Players</string>
@@ -19,4 +18,5 @@
     <string name="ReactionTimeResultsText">Reaction Time:</string>
 
     <string name="TimerIntroPrompt"> Reaction Timer \n\n This is a single-user mode that measures reaction times. \n When the "STOP" button appears click the button as fast as possible. \n\nClick anywhere on this screen to begin</string>
+    <string name="StopButton">STOP</string>
 </resources>
