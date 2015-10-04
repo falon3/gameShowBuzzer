@@ -19,6 +19,7 @@ public class ReactionTimerPlayActivity extends MainActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reaction_timer_play_screen);
+        
         addListenerOnButton3();
     }
 

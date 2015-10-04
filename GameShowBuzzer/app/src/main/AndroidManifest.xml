@@ -29,7 +29,8 @@
 
         <activity
             android:label="@string/app_name"
-            android:name=".ReactionTimerPlayActivity" >
+            android:name=".ReactionTimerPlayActivity"
+            android:parentActivityName=".MainActivity" >
         </activity>
 
         <activity
