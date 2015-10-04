@@ -6,4 +6,15 @@
     <string name="mainMenuTextView">Main Menu</string>
     <string name="reactionTimerButton">Reaction Timer</string>
     <string name="gameShowBuzzerButton">Game Show Buzzer</string>
+    <string name="Player1Button">Player 1</string>
+    <string name="Player2Button">Player2</string>
+    <string name="player2Button">Player3</string>
+    <string name="Player3Button">Player3</string>
+    <string name="Player4Button">Player4</string>
+    <string name="StopButton">STOP</string>
+    <string name="numPlayersText">Select Number of Players</string>
+    <string name="TwoPlayerModeButton">2 Players</string>
+    <string name="ThreePlayerModeButton">3 Players</string>
+    <string name="FourPlayerModeButton">4 Players</string>
+    <string name="ReactionTimeResultsText">Reaction Time:</string>
 </resources>

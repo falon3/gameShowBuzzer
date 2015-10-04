@@ -1,16 +1,66 @@
+/*This file is part of GameShowBuzzer.
+
+        gameShowBuzzer is a reaction timer and gameshow buzzer application for Android
+
+        GameShowBuzzer is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        GameShowBuzzer is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with GameShowBuzzer. If not, see <http://www.gnu.org/licenses/>.*/
+
 package com.example.scheers.gameshowbuzzer;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    Button reactionTimerButton;
+    Button gameShowBuzzerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addListenerOnButton();
+    }
+
+    public void addListenerOnButton() {
+
+        final Context context = this;
+        reactionTimerButton = (Button) findViewById(R.id.reactionTimerButton);
+        reactionTimerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent1 = new Intent(context, ReactionTimerActivity.class);
+                startActivity(intent1);
+
+            }
+
+        });
+        gameShowBuzzerButton = (Button) findViewById(R.id.gameShowBuzzerButton);
+        gameShowBuzzerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent2 = new Intent(context, BuzzerGameActivity.class);
+                startActivity(intent2);
+
+            }
+        });
     }
 
     @Override
@@ -33,5 +83,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void GoToReactionTimerGame(View view) {
+
     }
 }

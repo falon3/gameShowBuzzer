@@ -30,7 +30,9 @@
         android:layout_below="@+id/mainMenuTextView"
         android:layout_alignEnd="@+id/mainMenuTextView"
         android:layout_alignStart="@+id/mainMenuTextView"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:layout_alignParentEnd="false"
+        android:onClick= "GoToReactionTimerGame"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -40,6 +42,7 @@
         android:layout_marginTop="76dp"
         android:textSize="40sp"
         android:layout_below="@+id/reactionTimerButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:clickable="true" />
 
 </RelativeLayout>
