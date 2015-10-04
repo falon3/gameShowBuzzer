@@ -5,11 +5,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/StopButton"
-        android:id="@+id/StopButton"
+        android:text="@string/TimerIntroPrompt"
+        android:id="@+id/TimerIntroPrompt"
         android:longClickable="true"
-        android:textSize="80sp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:clickable="true" />
+        android:textSize="30sp"
+        android:clickable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

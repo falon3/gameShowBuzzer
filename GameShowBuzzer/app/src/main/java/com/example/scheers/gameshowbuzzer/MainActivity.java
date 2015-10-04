@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
         reactionTimerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent1 = new Intent(context, ReactionTimerActivity.class);
+                Intent intent1 = new Intent(context, ReactionTimerIntroActivity.class);
                 startActivity(intent1);
 
             }

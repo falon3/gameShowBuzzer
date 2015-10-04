@@ -16,13 +16,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:label="@string/app_name"
-            android:name=".ReactionTimerActivity" >
-        </activity>
+
         <activity
             android:label="@string/app_name"
             android:name=".BuzzerGameActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".ReactionTimerIntroActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".ReactionTimerPlayActivity" >
         </activity>
     </application>
 
