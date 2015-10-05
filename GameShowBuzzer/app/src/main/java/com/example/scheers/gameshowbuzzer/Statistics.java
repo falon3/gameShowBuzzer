@@ -1,9 +1,13 @@
 package com.example.scheers.gameshowbuzzer;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.TextView;
+
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by scheers on 10/4/15.
@@ -14,6 +18,7 @@ public class Statistics extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.stats_layout);
+        //update_timer_stats(); DIDN'T WORK
     }
 
     private ArrayList<Long> reactions_times = new ArrayList<Long>();
@@ -59,5 +64,21 @@ public class Statistics extends ActionBarActivity {
         }
     }
 
+    public void update_timer_stats()
 
-}
+    {
+        //hmm tried a few things here but stats weren't accessible as I thought
+
+        //Long d = Collections.max(reactions_times);
+        Long d = get_reaction_times(1);
+        String max_all_to_print = String.format("%d", (Long)d);
+        //max_all_to_print = "Max time response:" + max_all_to_print;
+
+        final TextView textViewToChange = (TextView) findViewById(R.id.textView4);
+        textViewToChange.setText(max_all_to_print);
+    }
+
+    }
+
+
+

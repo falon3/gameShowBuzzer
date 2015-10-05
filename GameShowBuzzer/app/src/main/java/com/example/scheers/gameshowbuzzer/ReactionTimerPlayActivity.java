@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -87,12 +88,14 @@ public class ReactionTimerPlayActivity extends MainActivity {
             public void onClick(View arg0) {
                 // on click calculate time passed since turned green
                 Long total_time = System.currentTimeMillis() - start_time;
+                //update the arraylist stat
                 stats.add_time_stats(total_time);
 
                 AlertDialog.Builder result = new AlertDialog.Builder(context);
                 Long d = stats.get_reaction_times(1);
-                String result_to_print = String.format("%d", (Long)d);
+                String result_to_print = String.format("%d", (Long) d);
                 result.setMessage(result_to_print + " ms");
+
                 result.setCancelable(true);
                 result.setPositiveButton("play again?",
                         new DialogInterface.OnClickListener() {
