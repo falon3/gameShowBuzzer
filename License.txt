@@ -1,3 +1,5 @@
+#scheers-reflex
+
 scheers-reflex is a reaction timer and gameshow buzzer application for Android
 
 This file is part of scheers-reflex.
