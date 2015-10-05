@@ -4,8 +4,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="mainMenuTextView">Main Menu</string>
-    <string name="reactionTimerButton">Reaction Timer</string>
-    <string name="gameShowBuzzerButton">Game Show Buzzer</string>
+    <string name="reactionTimerButton">Single Player \n Reaction Timer</string>
+    <string name="gameShowBuzzerButton">Multiplayer Game Show Buzzer</string>
     <string name="Player1Button">Player 1</string>
     <string name="Player2Button">Player2</string>
     <string name="player2Button">Player3</string>
@@ -16,7 +16,23 @@
     <string name="ThreePlayerModeButton">3 Players</string>
     <string name="FourPlayerModeButton">4 Players</string>
     <string name="ReactionTimeResultsText">Reaction Time:</string>
+    <string name="WarningMessage">Pressed Too Early! \n Wait until button turns green to press!</string>
 
-    <string name="TimerIntroPrompt"> Reaction Timer \n\n This is a single-user mode that measures reaction times. \n Wait when the red button is shown and when it turns green click it as fast as possible. \n\nClick anywhere on this screen to begin</string>
+    <string name="TimerIntroPrompt"> Reaction Timer \n\n This is a single-user mode that measures reaction times.
+        \nWait when the red button is shown and when it turns green click it as fast as possible.
+        \n\nClick anywhere on this screen to begin</string>
     <string name="StopButton">STOP</string>
+    <string name="StatisticRecords">Game Statistics</string>
+    <string name="reaction_stats"> Max reaction time: \n Min reaction time: \n Max of last 10 reactions:
+        \n Min of last 10 reactions: \n Max of last 100 reactions: \n Min of last 100 reactions:
+        \n Median of all reaction times: \n Median of last 10 reaction times: \n Median of last 100 reaction times: \n</string>
+    <string name="StatButtonText">Game Statistics</string>
+    <string name="twoPlayerButton">2 Player Mode</string>
+    <string name="threePlayerButton">3 Player Mode</string>
+    <string name="fourPlayerButton">4 Player Mode</string>
+    <string name="twoP_playerOneButton">Player 1</string>
+    <string name="twoP_playerTwoButton">Player2</string>
+    <string name="threeP_player1ButtonText">Player 1</string>
+    <string name="threeP_player2ButtonText">Player 2</string>
+    <string name="threeP_player3ButtonText">Player 3</string>
 </resources>

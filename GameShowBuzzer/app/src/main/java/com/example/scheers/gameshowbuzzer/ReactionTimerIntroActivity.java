@@ -13,7 +13,6 @@ import android.widget.Button;
 public class ReactionTimerIntroActivity extends MainActivity {
     Button reactionTimerButton;
     Button TimerIntroPrompt;
-    Button StopButton;
 
 
     @Override
@@ -31,7 +30,6 @@ public class ReactionTimerIntroActivity extends MainActivity {
             @Override
             public void onClick(View arg0) {
                 Intent intent1 = new Intent(context, ReactionTimerPlayActivity.class);
-
                 startActivity(intent1);
 
             }

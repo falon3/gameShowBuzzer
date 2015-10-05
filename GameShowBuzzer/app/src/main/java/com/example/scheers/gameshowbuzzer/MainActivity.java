@@ -26,11 +26,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
+
 
 public class MainActivity extends ActionBarActivity {
 
     Button reactionTimerButton;
     Button gameShowBuzzerButton;
+    Button statButton;
+    private String FILENAME = "Stats_saved.sav";
+    public Statistics stats = new Statistics();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +64,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View arg0) {
                 Intent intent1 = new Intent(context, ReactionTimerIntroActivity.class);
                 startActivity(intent1);
-
             }
 
         });
@@ -56,11 +71,22 @@ public class MainActivity extends ActionBarActivity {
         gameShowBuzzerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent2 = new Intent(context, BuzzerGameActivity.class);
+                Intent intent2 = new Intent(context, HowManyPlayersActivity.class);
                 startActivity(intent2);
 
             }
         });
+        statButton = (Button) findViewById(R.id.statButton);
+        statButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent3 = new Intent(context, Statistics.class);
+                startActivity(intent3);
+
+
+            }
+        });
+
     }
 
     @Override
@@ -88,4 +114,40 @@ public class MainActivity extends ActionBarActivity {
     public void GoToReactionTimerGame(View view) {
 
     }
+    private void loadFromFile() {
+        try {
+            FileInputStream fis = openFileInput(FILENAME);
+            BufferedReader in = new BufferedReader(new InputStreamReader(fis));
+            Gson gson = new Gson();
+            // put URL referenced here
+            Type arraylistType = new TypeToken<Statistics>() {}.getType();
+            stats = gson.fromJson(in, arraylistType);
+
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            stats = new Statistics();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+            Gson gson = new Gson();
+            gson.toJson(stats, out);
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        }
+    }
+
 }

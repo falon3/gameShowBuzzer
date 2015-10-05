@@ -1,10 +1,8 @@
 package com.example.scheers.gameshowbuzzer;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,7 +29,7 @@ public class ReactionTimerPlayActivity extends MainActivity {
     }
 
     public void delayUntilGreen() {
-        // after a certain delay, change background color of button
+        // after a certain delay, change background color of button to green
         // source credit: http://stackoverflow.com/questions/15874117/how-to-set-delay-in-android
         // random b/w 10ms and 2000ms
         int rand_time = new Random().nextInt(2000 - 10) + 10;
@@ -47,7 +45,7 @@ public class ReactionTimerPlayActivity extends MainActivity {
         }, rand_time);
     }
 
-
+    // When button is Red I have the mode where it reacts with warning message if pressed
     public void addListenerOnButtonRed() {
         StopButton = (Button) findViewById(R.id.StopButton);
         final Context context = this;
@@ -63,10 +61,12 @@ public class ReactionTimerPlayActivity extends MainActivity {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
+
+                                // restart reaction timer game by re-setting this Layout
                                 StopButton.setBackgroundColor(Color.RED);
                                 delayUntilGreen();
                                 addListenerOnButtonRed();
-                                // restart timer here
+
                             }
                         });
                 AlertDialog early_alert = alert.create();
@@ -75,16 +75,24 @@ public class ReactionTimerPlayActivity extends MainActivity {
         });
     }
 
+    // When button is Green I have the mode where it times the reaction,
+    // saves it to the stats file and displays it in pop-up
     public void addListenerOnButtonGreen() {
         final long start_time = System.currentTimeMillis();
+
         StopButton = (Button) findViewById(R.id.StopButton);
         final Context context = this;
         StopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                long total_time = System.currentTimeMillis() - start_time;
+                // on click calculate time passed since turned green
+                Long total_time = System.currentTimeMillis() - start_time;
+                stats.add_time_stats(total_time);
+
                 AlertDialog.Builder result = new AlertDialog.Builder(context);
-                result.setMessage("Time pressed: ");
+                Long d = stats.get_reaction_times(1);
+                String result_to_print = String.format("%d", (Long)d);
+                result.setMessage(result_to_print + " ms");
                 result.setCancelable(true);
                 result.setPositiveButton("play again?",
                         new DialogInterface.OnClickListener() {
@@ -100,9 +108,7 @@ public class ReactionTimerPlayActivity extends MainActivity {
                 AlertDialog early_alert = result.create();
                 early_alert.show();
             }
-
         });
-
     }
 }
 

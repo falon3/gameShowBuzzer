@@ -19,7 +19,27 @@
 
         <activity
             android:label="@string/app_name"
-            android:name=".BuzzerGameActivity" >
+            android:name=".Statistics" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".HowManyPlayersActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".BuzzerGameTwoActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".BuzzerGameThreeActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".BuzzerGameFourActivity" >
         </activity>
 
         <activity
