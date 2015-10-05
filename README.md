@@ -1,17 +1,21 @@
 # scheers-reflex
 scheers-reflex is a reaction timer and gameshow buzzer application for Android
 
-The video of the working app is here on gitHub: https://github.com/falon3/gameShowBuzzer/blob/master/video.mkv
-You can find the compiled apk file in GameShowBuzzer/bin
-You can find the UML system documentation in GameShowBuzzer/doc
+-The video of the working app is here on gitHub: https://github.com/falon3/gameShowBuzzer/blob/master/video.mkv 
+
+-You can find the compiled apk file in GameShowBuzzer/bin
+
+-You can find the UML system documentation in GameShowBuzzer/doc
 
 
 
-Resource References used for theory or for code snippets used:
+Resource References used for theory or code snippets used:
 
     Stack-OverFlow:
         -http://stackoverflow.com/questions/4597690/android-timer-how
         -http://stackoverflow.com/questions/12615720/setbackgroundcolor-in-android
+        -http://stackoverflow.com/questions/2115758/how-to-display-alert-dialog-in-android
+        -http://stackoverflow.com/questions/15874117/how-to-set-delay-in-android
     
     eClass:
         -https://www.youtube.com/watch?v=VKVYUXNuDDg&feature=youtu.be
@@ -27,3 +31,4 @@ Resource References used for theory or for code snippets used:
     Other:
         -http://www.mkyong.com/android/android-activity-from-one-screen-to-another-screen/
         -https://github.com/falon3/lonelyTwitter
+        -http://stackoverflow.com/questions/17123384/how-to-generate-class-diagram-uml-on-android-studio
