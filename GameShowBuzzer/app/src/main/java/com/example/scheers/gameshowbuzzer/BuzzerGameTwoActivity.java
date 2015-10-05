@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,32 +22,58 @@ public class BuzzerGameTwoActivity extends MainActivity {
         setContentView(R.layout.buzzer_game_two);
         player1Button = (Button) findViewById(R.id.player1Button);
         player2Button = (Button) findViewById(R.id.player2Button);
-        addListenerOnButton();
+        addListenerOnButtons();
+
     }
 
-    public void addListenerOnButton() {
+    public void addListenerOnButtons() {
+    final Context context = this;
+    player1Button.setOnClickListener(new View.OnClickListener(){
 
-        final Context context = this;
+        @Override
+        public void onClick (View arg0){
+            //Log.d("getting here?", "uhhh?"); DEBUG
+        // this makes a pop-up alert with a dismiss button.
+        // source credit: http://stackoverflow.com/questions/2115758/how-to-display-alert-dialog-in-android
+        AlertDialog.Builder alert = new AlertDialog.Builder(context);
+        alert.setMessage("Player One!");
+        alert.setCancelable(true);
+        alert.setPositiveButton("dismiss",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        stats.add_player_stats(2, "Player One");
 
-        player1Button.setOnClickListener(new View.OnClickListener() {
+                    }
+                });
+        AlertDialog p1_win = alert.create();
+        p1_win.show();
+    }
+    });
+
+        player2Button.setOnClickListener(new View.OnClickListener(){
+
             @Override
-            public void onClick(View arg0) {
+            public void onClick (View arg0){
+                //Log.d("getting here?", "uhhh?"); DEBUG
                 // this makes a pop-up alert with a dismiss button.
                 // source credit: http://stackoverflow.com/questions/2115758/how-to-display-alert-dialog-in-android
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);
-                alert.setMessage("Player One!");
+                alert.setMessage("Player Two!");
                 alert.setCancelable(true);
                 alert.setPositiveButton("dismiss",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
-                                stats.add_player_stats(2, "Player One");
+                                stats.add_player_stats(2, "Player Two");
+
                             }
                         });
-                AlertDialog p1_win = alert.create();
-                p1_win.show();
+                AlertDialog p2_win = alert.create();
+                p2_win.show();
             }
         });
-
-    }
 }
+}
+
+
