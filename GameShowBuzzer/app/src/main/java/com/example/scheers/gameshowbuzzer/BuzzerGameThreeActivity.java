@@ -1,5 +1,21 @@
-package com.example.scheers.gameshowbuzzer;
+/*This file is part of scheers-reflex.
 
+        scheers-reflex is a reaction timer and gameshow buzzer application for Android
+
+        scheers-reflex is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+
+        scheers-reflex is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with scheers-reflex. If not, see <http://www.gnu.org/licenses/>.*/
+
+package com.example.scheers.gameshowbuzzer;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,6 +26,7 @@ import android.widget.Button;
 /**
  * Created by scheers on 10/4/15.
  */
+
 public class BuzzerGameThreeActivity extends MainActivity{
 
     Button player1Button;
