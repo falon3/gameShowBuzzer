@@ -118,11 +118,9 @@ public class ReactionTimerPlayActivity extends MainActivity {
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 StopButton.setBackgroundColor(Color.RED);
-
-                                //Intent intent = new Intent(ReactionTimerPlayActivity.this, ReactionTimerPlayActivity.class);
+                                // restart timer here
                                 addListenerOnButtonRed();
                                 delayUntilGreen();
-                                // restart timer here
                             }
                         });
                 AlertDialog early_alert = result.create();
