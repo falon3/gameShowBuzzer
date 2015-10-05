@@ -2,6 +2,9 @@
 scheers-reflex is a reaction timer and gameshow buzzer application for Android
 
 The video of the working app is here on gitHub: https://github.com/falon3/gameShowBuzzer/blob/master/video.mkv
+You can find the compiled apk file in GameShowBuzzer/bin
+You can find the UML system documentation in GameShowBuzzer/doc
+
 
 
 Resource References used for theory or for code snippets used:
